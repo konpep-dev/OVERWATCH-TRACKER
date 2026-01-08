@@ -252,8 +252,12 @@ def show_menu():
     print("  [1] CPU only (works everywhere)")
     if HAS_CUDA:
         print("  [2] NVIDIA GPU (CUDA) - Fastest")
+    else:
+        print("  [2] NVIDIA GPU - Not supported")
     if HAS_DIRECTML:
         print("  [3] AMD/Intel GPU (DirectML)")
+    else:
+        print("  [3] AMD/Intel GPU - Not supported")
     print()
     
     while True:
@@ -261,12 +265,20 @@ def show_menu():
         if choice == '1':
             device = 'cpu'
             break
-        elif choice == '2' and HAS_CUDA:
-            device = 'cuda'
-            break
-        elif choice == '3' and HAS_DIRECTML:
-            device = 'directml'
-            break
+        elif choice == '2':
+            if HAS_CUDA:
+                device = 'cuda'
+                break
+            else:
+                print("  NVIDIA GPU not available!")
+                continue
+        elif choice == '3':
+            if HAS_DIRECTML:
+                device = 'directml'
+                break
+            else:
+                print("  DirectML not available!")
+                continue
         print("Invalid choice!")
     
     # Quality selection
