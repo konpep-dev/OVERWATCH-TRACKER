@@ -115,7 +115,7 @@ Support for NVIDIA CUDA & AMD DirectML
 
 ```bash
 # Clone the repository
-git clone https://github.com/konpep/OVERWATCH-Tracker.git
+git clone https://github.com/konpep-dev/OVERWATCH-TRACKER.git
 
 # Navigate to directory
 cd OVERWATCH-Tracker
@@ -313,6 +313,6 @@ See [LICENSE](LICENSE) for details
 
 <br>
 
-[![GitHub](https://img.shields.io/badge/GitHub-konpep-181717?style=for-the-badge&logo=github)](https://github.com/konpep)
+[![GitHub](https://img.shields.io/badge/GitHub-konpep--dev-181717?style=for-the-badge&logo=github)](https://github.com/konpep-dev)
 
 </div>
